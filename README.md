@@ -5,6 +5,13 @@
 npm install
 ```
 
+
+### Run server
+
+```
+npx json-server --watch db/db.json
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
