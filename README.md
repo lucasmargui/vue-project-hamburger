@@ -61,6 +61,25 @@ No código a seguir, a função "e.preventDefault()" é utilizada para impedir o
 </div>
 
 
+## Read
+
+Processo de leitura de dados no Banco de Dados Através do Componente DashBoard
+
+Quando o BurgerForm é carregado, o ciclo de vida 'mounted' é acionado, desencadeando a execução de uma função assíncrona chamada 'this.getPedidos'. Esta função realiza uma requisição ao servidor JSON para obter os pedidos por meio do método fetch. Após receber um objeto JSON contendo os pedidos, atribui esses dados às variáveis declaradas no método 'data()' do Vue.js. Por serem reativas, as mudanças nessas variáveis fazem com que o Vue reconstrua os componentes ou elementos que utilizam esses dados, como atualização da lista. Ao término, a função 'this.getStatus' é invocada, representando uma estrutura tabular simulada na qual são registrados os identificadores dos pedidos juntamente com seus respectivos estados.
+
+<div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/627140a4-05c4-495a-9c92-ebdf974905ad" style="width:90%">
+</div>
+
+
+## Update
+
+
+
+
+
+
+
 
 
 
