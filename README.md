@@ -74,6 +74,46 @@ Quando o BurgerForm é carregado, o ciclo de vida 'mounted' é acionado, desenca
 
 ## Update
 
+- const option = event.target.value; : Aqui, a função extrai o valor selecionado do evento event
+
+- const dataJson = JSON.stringify({status: option});: O valor selecionado é então convertido em formato JSON e colocado dentro de um objeto com a chave "status". Este objeto JSON é convertido em uma string usando JSON.stringify().
+
+- const req = await fetch(http://localhost:3000/burgers/${id} : A função fetch()é usada para fazer uma requisição PATCH para o servidor local, onde o recurso de atualização de hambúrgueres está localizado. A URL é construída com base no ID fornecido. O ${id} é substituído pelo valor do parâmetro id passado para a função.
+
+- const res = await req.json(): Uma vez que a requisição é completada, o resultado é extraído da resposta (response) usando o método json(), que converte os dados da resposta em um objeto JavaScript.
+
+
+<div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/dff8e24d-1f6d-411e-b66a-9f218899847e" style="width:90%">
+</div>
+
+
+## Delete
+
+
+- Dentro da função, há uma chamada para fetch, que é uma API nativa do navegador para fazer requisições HTTP. Essa chamada envia uma requisição DELETE para o endpoint http://localhost:3000/burgers/${id}. O ${id} é substituído pelo valor do parâmetro id passado para a função. Essa requisição DELETE é para remover um recurso (nesse caso, um "hambúrguer") do servidor.
+
+ - Após o envio da requisição DELETE, a função aguarda a resposta usando await e a converte para JSON usando req.json().
+
+- O resultado da conversão para JSON é armazenado na variável res.
+
+- Após obter a resposta do servidor e converter para JSON, a função chama this.getPedidos(). Presumivelmente, getPedidos() é uma função que busca novamente os pedidos (ou recursos relacionados) após a remoção do hambúrguer, atualizando assim a interface do usuário ou o estado da aplicação com os dados atualizados.
+
+
+  <div align="center">
+  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/d2a62472-7510-4af1-94f0-afb4fcb18ff0" style="width:90%">
+</div>
+
+
+
+## Resultado 
+
+![image](https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/94ddc0ea-6359-453d-b154-fdb565880281)
+
+
+
+
+
 
 
 
