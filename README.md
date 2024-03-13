@@ -108,7 +108,20 @@ Quando o BurgerForm é carregado, o ciclo de vida 'mounted' é acionado, desenca
 
 ## Resultado 
 
-![image](https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/94ddc0ea-6359-453d-b154-fdb565880281)
+<div align="center">
+  <h2> Criação de Hambúrguer </h2>
+ 
+  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/94ddc0ea-6359-453d-b154-fdb565880281" style="width:90%">
+</div>
+
+<div align="center">
+  <h2> Pedidos </h2>
+ 
+  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/0d3fb8bd-8d3f-46d3-b01e-2361ee4da467" style="width:90%">
+</div>
+
+
+
 
 
 
