@@ -22,6 +22,12 @@
 npx json-server --watch db/db.json
 ```
 
+### Iniciando o projeto
+
+```
+npm run serve
+```
+
 ## Projeto
 
 
