@@ -22,7 +22,7 @@
 ## Simulating an API
 
 
-### Database creation
+### Create database 
 
 <div align="center">
  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/2c376844-b415-4ae3-a38d-9c483236568f" style="width:50%">
