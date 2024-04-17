@@ -1,131 +1,127 @@
-<H1 align="center">Projeto Hamburgueria</H1>
-<p align="center">🚀 Projeto de criação de hamburgueria utilizando Vue para referências futuras</p>
+<H1 align="center">Hamburger Project</H1>
+<p align="center">🚀 Burger creation project using Vue for future references</p>
 
-## Requisitos
+## Requirements
 - Vue
 - Vue Router
 
 
-## Simulando uma Api
+<div align="center">
+ <h2> Create </h2>
 
-
-### Criação do banco de dados
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/94ddc0ea-6359-453d-b154-fdb565880281" style="width:90%">
+</div>
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/2c376844-b415-4ae3-a38d-9c483236568f" style="width:50%">
+ <h2> Orders </h2>
+
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/0d3fb8bd-8d3f-46d3-b01e-2361ee4da467" style="width:90%">
+</div>
+
+
+## Simulating an API
+
+
+### Database creation
+
+<div align="center">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/2c376844-b415-4ae3-a38d-9c483236568f" style="width:50%">
 </div>
 <br>
 
-### Iniciando o servidor json
+### Starting the json server
 
 ```
 npx json-server --watch db/db.json
 ```
 
-### Iniciando o projeto
+### Starting the project
 
 ```
-npm run serve
+npm run serves
 ```
 
-## Projeto
+## Project
 
 
-## Create 
+##Create
 
-Processo de Inserção de Dados no Banco de Dados Através do Componente BurgerForm
+Data Insertion Process into the Database Using the BurgerForm Component
 
-O componente BurgerForm é responsável pela lógica de inserção de dados no banco de dados.
+The BurgerForm component is responsible for the data insertion logic into the database.
 
-Quando o BurgerForm é carregado, o ciclo de vida 'mounted' é acionado, desencadeando a execução de uma função assíncrona chamada 'this.getIngredientes'. Esta função realiza uma requisição ao servidor JSON para obter os ingredientes por meio do método fetch. Após receber um objeto JSON contendo os ingredientes, atribui esses dados às variáveis declaradas no método 'data()' do Vue.js. Por serem reativas, as mudanças nessas variáveis fazem com que o Vue reconstrua os componentes ou elementos que utilizam esses dados, como é o caso do 'select' que contém os ingredientes.
+When the BurgerForm is loaded, the 'mounted' lifecycle is triggered, triggering the execution of an asynchronous function called 'this.getIngredients'. This function makes a request to the JSON server to obtain the ingredients through the fetch method. After receiving a JSON object containing the ingredients, it assigns this data to the variables declared in the Vue.js 'data()' method. Because they are reactive, changes to these variables cause Vue to rebuild the components or elements that use this data, as is the case with the 'select' that contains the ingredients.
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/11f74578-2e07-4f4d-9eea-f6129d5bf91a" style="width:50%">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/11f74578-2e07-4f4d-9eea-f6129d5bf91a" style="width:50%">
 </div>
 <br>
 
-Os dados fornecidos nos inputs do formulário são vinculados às variáveis definidas no método "data()" utilizando a diretiva v:model.
+The data provided in the form inputs is linked to the variables defined in the "data()" method using the v:model directive.
 
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/82d1e2b0-8c69-4741-ae2a-0c098e14dd03" style="width:45%">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/9fade0d2-3175-443d-826d-a270ef635581" style="width:45%">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/82d1e2b0-8c69-4741-ae2a-0c098e14dd03" style="width:45%">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/9fade0d2-3175-443d-826d-a270ef635581" style="width:45%">
 </div>
 <br>
 
-Quando um formulário é preenchido e o botão de envio é clicado, uma função personalizada chamada "createBurger" é ativada.
+When a form is filled out and the submit button is clicked, a custom function called "createBurger" is activated.
 
 ```
  <form id="burger-form" method="POST" @submit="createBurger">
 ```
 <br>
 
-No código a seguir, a função "e.preventDefault()" é utilizada para impedir o envio do formulário via método POST, evitando a perda de dados ao atualizar a página. Os valores dos inputs são capturados e armazenados em um objeto chamado "data". Em seguida, esse objeto é convertido em uma string JSON através do método JSON.stringify(data). Posteriormente, é feita uma requisição POST para o servidor JSON previamente criado, na qual o objeto JSON é adicionado ao banco de dados.
+In the following code, the "e.preventDefault()" function is used to prevent the form from being sent via the POST method, avoiding data loss when updating the page. The input values ​​are captured and stored in an object called "data". This object is then converted to a JSON string using the JSON.stringify(data) method. Subsequently, a POST request is made to the previously created JSON server, in which the JSON object is added to the database.
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/eb171c22-408b-4255-a5cd-e3f7f32e8860" style="width:70%">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/eb171c22-408b-4255-a5cd-e3f7f32e8860" style="width:70%">
 </div>
 
 
 ## Read
 
-Processo de leitura de dados no Banco de Dados Através do Componente DashBoard
+Process of reading data in the Database Through the DashBoard Component
 
-Quando o BurgerForm é carregado, o ciclo de vida 'mounted' é acionado, desencadeando a execução de uma função assíncrona chamada 'this.getPedidos'. Esta função realiza uma requisição ao servidor JSON para obter os pedidos por meio do método fetch. Após receber um objeto JSON contendo os pedidos, atribui esses dados às variáveis declaradas no método 'data()' do Vue.js. Por serem reativas, as mudanças nessas variáveis fazem com que o Vue reconstrua os componentes ou elementos que utilizam esses dados, como atualização da lista. Ao término, a função 'this.getStatus' é invocada, representando uma estrutura tabular simulada na qual são registrados os identificadores dos pedidos juntamente com seus respectivos estados.
+When the BurgerForm is loaded, the 'mounted' lifecycle is triggered, triggering the execution of an asynchronous function called 'this.getPedidos'. This function makes a request to the JSON server to obtain requests using the fetch method. After receiving a JSON object containing the requests, it assigns this data to the variables declared in the Vue.js 'data()' method. Because they are reactive, changes to these variables cause Vue to rebuild the components or elements that use this data, such as updating the list. When finished, the 'this.getStatus' function is invoked, representing a simulated tabular structure in which the request identifiers are recorded along with their respective states.
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/627140a4-05c4-495a-9c92-ebdf974905ad" style="width:90%">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/627140a4-05c4-495a-9c92-ebdf974905ad" style="width:90%">
 </div>
 
 
 ## Update
 
-- const option = event.target.value; : Aqui, a função extrai o valor selecionado do evento event
+- const option = event.target.value; : Here, the function extracts the selected value from the event event
 
-- const dataJson = JSON.stringify({status: option});: O valor selecionado é então convertido em formato JSON e colocado dentro de um objeto com a chave "status". Este objeto JSON é convertido em uma string usando JSON.stringify().
+- const dataJson = JSON.stringify({status: option});: The selected value is then converted into JSON format and placed inside an object with the key "status". This JSON object is converted to a string using JSON.stringify().
 
-- const req = await fetch(http://localhost:3000/burgers/${id} : A função fetch()é usada para fazer uma requisição PATCH para o servidor local, onde o recurso de atualização de hambúrgueres está localizado. A URL é construída com base no ID fornecido. O ${id} é substituído pelo valor do parâmetro id passado para a função.
+- const req = await fetch(http://localhost:3000/burgers/${id} : The fetch() function is used to make a PATCH request to the local server, where the burger update resource is located. URL is constructed based on the provided ID. The ${id} is replaced by the value of the id parameter passed to the function.
 
-- const res = await req.json(): Uma vez que a requisição é completada, o resultado é extraído da resposta (response) usando o método json(), que converte os dados da resposta em um objeto JavaScript.
+- const res = await req.json(): Once the request is completed, the result is extracted from the response using the json() method, which converts the response data into a JavaScript object.
 
 
 <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/dff8e24d-1f6d-411e-b66a-9f218899847e" style="width:90%">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/dff8e24d-1f6d-411e-b66a-9f218899847e" style="width:90%">
 </div>
 
 
 ## Delete
 
 
-- Dentro da função, há uma chamada para fetch, que é uma API nativa do navegador para fazer requisições HTTP. Essa chamada envia uma requisição DELETE para o endpoint http://localhost:3000/burgers/${id}. O ${id} é substituído pelo valor do parâmetro id passado para a função. Essa requisição DELETE é para remover um recurso (nesse caso, um "hambúrguer") do servidor.
+- Inside the function, there is a call to fetch, which is a native browser API for making HTTP requests. This call sends a DELETE request to the http://localhost:3000/burgers/${id} endpoint. The ${id} is replaced by the value of the id parameter passed to the function. This DELETE request is to remove a resource (in this case, a "hamburger") from the server.
 
- - Após o envio da requisição DELETE, a função aguarda a resposta usando await e a converte para JSON usando req.json().
+ - After sending the DELETE request, the function waits for the response using await and converts it to JSON using req.json().
 
-- O resultado da conversão para JSON é armazenado na variável res.
+- The result of the conversion to JSON is stored in the res variable.
 
-- Após obter a resposta do servidor e converter para JSON, a função chama this.getPedidos(). Presumivelmente, getPedidos() é uma função que busca novamente os pedidos (ou recursos relacionados) após a remoção do hambúrguer, atualizando assim a interface do usuário ou o estado da aplicação com os dados atualizados.
+- After obtaining the response from the server and converting it to JSON, the function calls this.getPedidos(). Presumably, getPedidos() is a function that re-fetches orders (or related resources) after removing the hamburger, thus updating the user interface or application state with the updated data.
 
 
-  <div align="center">
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/d2a62472-7510-4af1-94f0-afb4fcb18ff0" style="width:90%">
+ <div align="center">
+ <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/d2a62472-7510-4af1-94f0-afb4fcb18ff0" style="width:90%">
 </div>
-
-
-
-## Resultado 
-
-<div align="center">
-  <h2> Criação de Hambúrguer </h2>
- 
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/94ddc0ea-6359-453d-b154-fdb565880281" style="width:90%">
-</div>
-
-<div align="center">
-  <h2> Pedidos </h2>
- 
-  <img src="https://github.com/lucasmargui/Vue_Projeto_Hamburgueria/assets/157809964/0d3fb8bd-8d3f-46d3-b01e-2361ee4da467" style="width:90%">
-</div>
-
 
 
 
